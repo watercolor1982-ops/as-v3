@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -276,7 +277,7 @@ body {
 }
 .ts-btn {
   width: 32px;
-  height: 40px;
+  height: 32px;
   border: none;
   background: transparent;
   color: var(--gold);
@@ -292,13 +293,13 @@ body {
 .ts-input {
   flex: 1;
   min-width: 0;
-  height: 40px;
+  height: 32px;
   background: transparent;
   border: none;
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
   color: var(--text);
-  font-size: 0.92em;
+  font-size: 0.85em;
   font-weight: 700;
   text-align: center;
   outline: none;
@@ -814,12 +815,12 @@ input[type=number] { -moz-appearance: textfield; }
 
     <div class="margin-cards">
       <div class="m-card xm">
-        <div class="m-card-label">海外口座<br>必要証拠金</div>
+        <div class="m-card-label">海外口座<br>必要資金（証拠金＋バッファ込み）</div>
         <div class="m-card-broker">レバ1,000倍（XM等）</div>
         <div class="m-card-value" id="resXM">0 円</div>
       </div>
       <div class="m-card dom">
-        <div class="m-card-label">国内口座<br>必要証拠金</div>
+        <div class="m-card-label">国内口座<br>必要資金（証拠金＋バッファ込み）</div>
         <div class="m-card-broker">レバ25倍（楽天FX等）</div>
         <div class="m-card-value" id="resRakuten">0 円</div>
       </div>
@@ -828,8 +829,8 @@ input[type=number] { -moz-appearance: textfield; }
     <div class="breakdown" style="border-top:1px solid var(--border)">
       <div class="bd-row">
         <div class="bd-left">
-          <div class="bd-name">🛡 変動バッファ（安全資金）</div>
-          <div class="bd-hint">為替変動リスクに備える追加資金。証拠金と合わせて用意する</div>
+          <div class="bd-name">🛡 変動バッファ（上記必要資金に含まれています）</div>
+          <div class="bd-hint">為替変動リスクに備える安全資金。証拠金に上乗せして必要資金に含めています</div>
         </div>
         <div class="bd-amt c-muted" id="resBuffer">0 円</div>
       </div>
@@ -838,7 +839,7 @@ input[type=number] { -moz-appearance: textfield; }
 
   <div class="footnote">
     <p>※ スプレッドコストは「(海外スプレッド＋国内スプレッド) × Lot数 × 往復4回分（1pip＝10円/0.1Lot換算）」で計算しています。</p>
-    <p>※ 本シミュレーションはスワップ益のみを算出した理論値です。実際には決済タイミングのズレ・スプレッド変動・ダミートレードによる損益等により下回る場合があります。</p>
+    <p>※ 月間実質利益はスワップ益からスプレッドコストを差し引いた理論値です。実際には決済タイミングのズレ・スプレッド変動・ダミートレードによる損益等により下回る場合があります。</p>
     <p>※ 実際の運用結果を保証するものではありません。</p>
   </div>
 
